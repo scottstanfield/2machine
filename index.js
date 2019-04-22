@@ -11,7 +11,7 @@ require('dotenv').config();
 const port = process.env.PORT || 8080;
 
 // Setup logger
-process.env.LOGGER && app.use(morgan(process.env.LOGGER));
+// process.env.LOGGER && app.use(morgan(process.env.LOGGER));
 
 // Trust the nginx proxy
 app.set('trust proxy', true);
