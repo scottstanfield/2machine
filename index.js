@@ -22,7 +22,6 @@ app.use(cors());
 
 // Our only route
 app.get('/', (req, res) => {
-    req.log.info('something');
     res.send(`Hi Ryan! I got HTTPS working: crazy stuff. Running express on ${port}`);
 })
 
@@ -44,5 +43,5 @@ app.use((err, req, res, next) => {
 
 // Start listning
 app.listen(port, () => {
-    console.log(`Running on ${port}.`);
+    console.error(`Running on ${port}.`);
 })
